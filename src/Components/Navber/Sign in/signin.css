@@ -1,0 +1,113 @@
+/* Container styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #1a1a3e; /* Dark background color */
+}
+
+/* Card styles */
+.card {
+  background-color: #ffffff; /* White card background */
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+  height: 400px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Avatar placeholder styles */
+.avatar-placeholder {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden; /* Ensures the image fits inside the circle */
+}
+
+.avatar-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image scales correctly */
+}
+
+/* Input styles */
+.input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Input wrapper for password */
+.input-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+/* Show password toggle */
+.show-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c63ff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Forgot password link */
+.forgot-password {
+  display: block;
+  
+  margin: 10px 0;
+  color: #6c63ff;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* Sign-in button styles */
+.sign-in-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1a1a3e;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.sign-in-button:hover {
+  background-color: #32325a; /* Slightly lighter shade for hover */
+}
+
+/* Register link */
+.register-link {
+  display: block;
+  margin-top: 20px;
+  color: #000000;
+  font-size: 14px;
+  text-decoration: none;
+}
+/* Container styles with background .gif */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('/path-to-your-background.gif'); /* Path to your .gif */
+  background-size: cover; /* Ensure the gif covers the entire background */
+  background-position: center; /* Center the gif */
+  background-repeat: no-repeat; /* Prevent the gif from repeating */
+  background-image: url('/background.gif');
+
+}
