@@ -1,24 +1,37 @@
-import React from 'react';
-import './Navber.css'
+import React from "react";
+import "./Navber.css";
+// import logo from "./public/logo.png";
+interface NavbarProps {
+  setCurrentPage: (page: string) => void;
+}
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC<NavbarProps> = ({ setCurrentPage }) => {
   return (
-    <div className="review-container">
-      <header className="header">
-        <nav className="nav-links">
-          <a href="#home">Home</a>
-          <a href="SignIn">Sign In</a>
-          <a href="#create">Create Account</a>
-          <a href="#movies">Movies</a>
-          <a href="#lists">Listes</a>
-          <a href="#theater">Avallable In Theater</a>
-        </nav>
-        <div className="search-bar">
-          <input type="text" placeholder="Search..." />
-          <button>🔍</button>
-        </div>
-      </header>
-    </div>
+    <nav className="navbar">
+      {/* <div className="navbar-logo" onClick={() => setCurrentPage("home")}>
+        <img src={logo} alt="Logo" className="navbar-logo-img" />
+      </div> */}
+      <div className="navbar-links">
+        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage("home"); }}>
+          Home
+        </a>
+        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage("signin"); }}>
+          Sign In
+        </a>
+        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage("createAccount"); }}>
+          Create Account
+        </a>
+        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage("lists"); }}>
+          Lists
+        </a>
+        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage("movies"); }}>
+          Movies
+        </a>
+        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage("inTheater"); }}>
+          Available In Theater
+        </a>
+      </div>
+    </nav>
   );
 };
 

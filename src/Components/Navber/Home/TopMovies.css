@@ -1,0 +1,110 @@
+.top-movies-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  h2 {
+    
+    text-align: left;
+    font-size: clamp(3vw, 3vw, 24px); 
+    font-weight: bold;
+  }
+
+  .movie-carousel {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    justify-content: space-between; /* Distribute items with equal space between them */
+    gap: 20px; /* Create a fixed gap between the movie cards */
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .movie-card {
+    width: clamp(100px, 15vw, 900px); /* Dynamically adjusts size */
+    aspect-ratio: 3 / 5; /* Maintains proportion */
+    background-color: #2d2d48;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    position: relative;
+  }
+  
+  .movie-image {
+    background-color: #c0bcbc;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .movie-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .movie-info {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .rating-value {
+    font-size: clamp(12px, 1.5vw, 14px); /* Adjusts font size */
+  }
+  
+  .movie-name {
+    font-size: clamp(14px, 2vw, 16px); /* Scales dynamically */
+    margin-bottom: 5px;
+  }
+  
+  .watchlist-button,
+  .trailer-button {
+    background-color: #aaa;
+    border: none;
+    border-radius: 5px;
+    padding: clamp(4px, 1vw, 5px); /* Dynamically adjusts padding */
+    font-size: clamp(10px, 3vw, 15px); /* Dynamically adjusts font size */
+    cursor: pointer;
+    margin: 2px 0;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    right: clamp(5px, 1vw, 10px); /* Adjusts position */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: 20px solid black;
+    border-radius: 50%;
+    padding: clamp(3px, 3vw, 5px); /* Adjusts button size */
+    cursor: pointer;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .movie-carousel {
+      gap: clamp(8px, 2vw, 10px); /* Smaller gaps on medium screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      text-align: center;
+      font-size: clamp(18px, 4vw, 20px); /* Center and scale dynamically */
+    }
+  
+    .carousel-button {
+      right: clamp(3px, 2vw, 5px); /* Adjust button position */
+    }
+  }
+  
