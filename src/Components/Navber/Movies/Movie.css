@@ -1,0 +1,106 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .movie-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Movie Info Section */
+  .movie-info {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .movie-img img {
+    width: 150px;
+    height: 220px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .movie-details h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333333;
+  }
+  
+  .movie-details p {
+    margin: 10px 0;
+    color: #555555;
+  }
+  
+  .avg-rating {
+    color: #f39c12;
+    font-weight: bold;
+  }
+  
+  .watch-trailer {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .watch-trailer:hover {
+    text-decoration: underline;
+  }
+  
+  /* Comment Section */
+  .interaction-section {
+    margin-top: 20px;
+  }
+  
+  .comment-box {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .rating-section {
+    margin: 20px 0;
+  }
+  
+  .stars {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .star {
+    font-size: 28px;
+    cursor: pointer;
+    color: #cccccc;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .star.filled {
+    color: #f39c12;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .submit-button:hover {
+    background-color: #1e40bd;
+  }
+  

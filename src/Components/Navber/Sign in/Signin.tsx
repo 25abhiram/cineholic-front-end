@@ -10,7 +10,7 @@ const Signin = () => {
         </div>
         <input
           type="text"
-          placeholder="Email or Phone"
+          placeholder="Username"
           className="input"
         />
         <div className="input-wrapper">

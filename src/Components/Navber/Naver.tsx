@@ -21,9 +21,9 @@ const Navbar: React.FC<NavbarProps> = ({ setCurrentPage }) => {
         <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage("createAccount"); }}>
           Create Account
         </a>
-        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage("lists"); }}>
+        {/* <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage("lists"); }}>
           Lists
-        </a>
+        </a> */}
         <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage("movies"); }}>
           Movies
         </a>

@@ -5,7 +5,7 @@
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #1a1a3e; /* Dark background color */
+  background-color: #1717d7; /* Dark background color */
 }
 
 /* Card styles */
@@ -86,28 +86,28 @@
 }
 
 .sign-in-button:hover {
-  background-color: #32325a; /* Slightly lighter shade for hover */
+  background-color: #9797ff; /* Slightly lighter shade for hover */
 }
 
 /* Register link */
 .register-link {
   display: block;
   margin-top: 20px;
-  color: #000000;
+  color: #000;
   font-size: 14px;
   text-decoration: none;
 }
-/* Container styles with background .gif */
-.container {
+
+/* .container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-image: url('/path-to-your-background.gif'); /* Path to your .gif */
-  background-size: cover; /* Ensure the gif covers the entire background */
-  background-position: center; /* Center the gif */
-  background-repeat: no-repeat; /* Prevent the gif from repeating */
+  background-image: url('/path-to-your-background.gif'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
   background-image: url('/background.gif');
 
-}
+} */
