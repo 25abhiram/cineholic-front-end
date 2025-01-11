@@ -6,7 +6,8 @@ const Signin = () => {
       
       <div className="card">
         <div className="avatar-placeholder">
-        <img src="/public/avatar.png" alt="Avatar" />"
+          <h1>Sign in</h1>
+        {/* <img src="/public/avatar.png" alt="Avatar" />" */}
         </div>
         <input
           type="text"

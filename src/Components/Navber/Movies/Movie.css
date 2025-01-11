@@ -40,19 +40,22 @@ body {
   }
   
   .avg-rating {
-    color: #f39c12;
+    color: #FFFF00;
     font-weight: bold;
   }
   
   .watch-trailer {
     display: inline-block;
     margin-top: 10px;
-    color: #007bff;
+    padding: 8px 12px;
+    background-color: #0073e6;
+    color: #fff;
     text-decoration: none;
+    border-radius: 5px;
   }
   
   .watch-trailer:hover {
-    text-decoration: underline;
+    background-color: #005bb5;
   }
   
   /* Comment Section */
@@ -82,12 +85,12 @@ body {
   .star {
     font-size: 28px;
     cursor: pointer;
-    color: #cccccc;
+    color: #1656d5;
     transition: color 0.2s ease-in-out;
   }
   
   .star.filled {
-    color: #f39c12;
+    color: #FFFF00;
   }
   
   .submit-button {
@@ -101,6 +104,7 @@ body {
   }
   
   .submit-button:hover {
-    background-color: #1e40bd;
+    background-color: #4d6ad2;
   }
+
   

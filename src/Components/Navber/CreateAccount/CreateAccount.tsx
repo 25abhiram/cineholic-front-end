@@ -9,7 +9,7 @@ const CreateAccount: React.FC = () => {
         <div className="avatar-placeholder"></div>
         <input
           type="text"
-          placeholder="User Name"
+          placeholder="Username"
           className="input"
         />
         <input
@@ -24,7 +24,7 @@ const CreateAccount: React.FC = () => {
         />
         <input
           type="email"
-          placeholder="E-mail"
+          placeholder="Email"
           className="input"
         />
         <button className="create-account-button">Create account</button>

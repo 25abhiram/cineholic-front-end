@@ -5,12 +5,12 @@
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #1a1a3e; /* Dark background color */
+    background-color: #ffff; /* Dark background color */
   }
   
   /* Card styles */
   .card {
-    background-color: #ffffff; /* White card background */
+    background-color: #7f8ee0; /* White card background */
     padding: 20px;
     border-radius: 10px;
     width: 300px;
@@ -19,16 +19,16 @@
   }
   
   /* Avatar placeholder styles */
-  .avatar-placeholder {
+  /* .avatar-placeholder {
     width: 60px;
     height: 60px;
     margin: 0 auto 20px;
     border-radius: 50%;
-    background-color: #e0e0e0; /* Light gray background */
+    background-color: #e0e0e0; 
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
   
   .avatar-placeholder::after {
     content: '';
@@ -43,10 +43,10 @@
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #cccccc;
+    border: 1px solid #ffff;
     border-radius: 25px;
     font-size: 14px;
-    background-color: #e8e6fa; /* Light purple background */
+    background-color: #e2e1eb; /* Light purple background */
     outline: none;
   }
   
@@ -59,7 +59,7 @@
   .create-account-button {
     width: 100%;
     padding: 10px;
-    background-color: #1a1a3e; /* Dark button background */
+    background-color: #151586; /* Dark button background */
     color: #ffffff; /* White text */
     border: none;
     border-radius: 25px;
@@ -70,6 +70,6 @@
   }
   
   .create-account-button:hover {
-    background-color: #32325a; /* Slightly lighter shade on hover */
+    background-color: #000; /* Slightly lighter shade on hover */
   }
   

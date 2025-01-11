@@ -1,61 +1,87 @@
 /* General Navbar Styles */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem 3rem;
+  padding: 1.5rem 2rem;
+  background: #1031db;
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-logo:hover {
+  color: #cde1ff;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-links a:hover {
+  /* display: block; Makes the link occupy the full width */
+  /* width: 100%; Ensures the hover effect spans the full width */
+  transform: scale(1.2); /* Slightly enlarge the element for a subtle hover effect */
+  background-color: #070512; /* Background color change */
+  color: #fff; /* Text color */
+  padding: 0.5rem 1.0rem; /* Adjust padding for consistent spacing */
+  border-radius: 5px; /* Optional: Slightly rounded corners */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+  }
+
+  .navbar-links {
+    gap: 1rem;
+    width: 100%;
     background: #1031db;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    
   }
-  
-  .navbar-logo {
-    font-size: 2rem; 
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-    transition: color 0.3s ease;
+
+  .navbar-links a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-align: left;
   }
-  
-  .navbar-logo:hover {
+
+  .navbar-links a:hover {
+    background-color: #090330;
     color: #fff;
   }
-  
-  .navbar-links {
+
+  /* Show navbar links when expanded */
+  .navbar-links.active {
     display: flex;
-    gap: 2rem; 
   }
-  
-  .navbar-links a {
-    text-decoration: none;
-    color: #ffff;
-    font-size: 1.2rem; 
-    font-weight: 500;
-    transition: color 0.3s ease, transform 0.2s ease;
+
+  /* Hamburger Menu Styles */
+  .navbar-toggle {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    background: none;
+    margin-left: auto;
   }
-  
-  .navbar-links a:hover {
-    color: #120c44;
-    transform: scale(1.1); 
-  }
-  
-    @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 1rem; 
-    }
-  
-    .navbar-logo {
-      font-size: 1.5rem; 
-    }
-  
-    .navbar-links {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  
-    .navbar-links a {
-      font-size: 1rem; 
-    }
-  }
-  
+}

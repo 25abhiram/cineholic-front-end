@@ -22,7 +22,7 @@ const Movie: React.FC = () => {
        
           <p>
           "Amaran" (2024) is a Tamil biographical action film directed by Rajkumar Periasamy, starring Sivakarthikeyan as Major Mukund Varadarajan. The movie chronicles Mukund's life, his heroic sacrifice during the 2014 Qazipathri Operation, and his posthumous Ashoka Chakra honor. Released on Diwali 2024, it became a box office hit and a tribute to Mukund's bravery, earning critical acclaim for its performances, direction, and music.          </p>
-          <p className="avg-rating">⭐ Avg Rating: 4.5</p>
+          <p className="avg-rating"> ☆ Avg Rating: 4.5</p>
           <a
             href="https://youtu.be/9SSd9L0SxN0?si=_-imassd_nnqpUGB"
             target="_blank"
@@ -57,7 +57,7 @@ const Movie: React.FC = () => {
                   onMouseEnter={() => setHover(starValue)}
                   onMouseLeave={() => setHover(0)}
                 >
-                  ⭐
+                  ☆
                 </span>
               );
             })}
