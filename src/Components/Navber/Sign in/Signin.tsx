@@ -6,8 +6,7 @@ const Signin = () => {
       
       <div className="card">
         <div className="avatar-placeholder">
-          <h1>Sign in</h1>
-        {/* <img src="/public/avatar.png" alt="Avatar" />" */}
+        <img src="/public/avatar1.png" alt="Avatar" />
         </div>
         <input
           type="text"
@@ -22,9 +21,9 @@ const Signin = () => {
           />
           <span className="show-password"></span>
         </div>
-        <a href="#" className="forgot-password">
+        {/* <a href="#" className="forgot-password">
           Forgot password?
-        </a>
+        </a> */}
         <button className="sign-in-button">Sign in</button>
         <a href="#" className="register-link">
           Don’t have an account? Register

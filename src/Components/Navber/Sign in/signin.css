@@ -1,86 +1,86 @@
-/* Container styles */
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #1717d7; /* Dark background color */
+
+.avatar-placeholder {
+  margin-bottom: 1.2px;
+}
+
+.avatar-placeholder img {
+  width: 250px;
+  height: 100px;
 }
 
 
-.card {
-  background-color: #ffffff; 
-  padding: 20px;
-  border-radius: 10px;
-  width: 350px;
-  height: 400px;
-  text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+.input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease-in-out;
 }
+
+.input:focus {
+  border-color: #6a11cb;
+  outline: none;
+}
+
 .input-wrapper {
   position: relative;
-  margin-bottom: 10px;
 }
 
-/* Show password toggle */
 .show-password {
   position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #6c63ff;
-  font-size: 12px;
+  right: 15px;
+  top: 12px;
   cursor: pointer;
+  font-size: 14px;
+  color: #aaa;
+  transition: color 0.3s ease-in-out;
 }
 
-/* Forgot password link */
-.forgot-password {
+.show-password:hover {
+  color: #6a11cb;
+}
+
+/* .forgot-password {
   display: block;
-  
-  margin: 10px 0;
-  color: #6c63ff;
-  font-size: 12px;
+  font-size: 14px;
+  color: #3717ec;
   text-decoration: none;
+  margin-bottom: 20px;
+  transition: color 0.3s ease-in-out;
 }
 
-/* Sign-in button styles */
+.forgot-password:hover {
+  color: #000;
+} */
+
 .sign-in-button {
   width: 100%;
-  padding: 10px;
-  background-color: #1a1a3e;
-  color: #ffffff;
+  padding: 12px 15px;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
   font-size: 16px;
-  font-weight: bold;
-  margin-top: 10px;
+  background-color: #060621;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .sign-in-button:hover {
-  background-color: #9797ff; /* Slightly lighter shade for hover */
+  background-color: #3717ec;
 }
 
-/* Register link */
 .register-link {
   display: block;
-  margin-top: 20px;
-  color: #000;
   font-size: 14px;
+  color: #3520cf;
   text-decoration: none;
+  margin-top: 15px;
 }
 
-/* .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-image: url('/path-to-your-background.gif'); 
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-image: url('/background.gif');
-
-} */
+.register-link:hover {
+  text-decoration: underline;
+  color: #000;
+}

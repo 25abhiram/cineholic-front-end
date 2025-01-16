@@ -8,10 +8,11 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ setCurrentPage }) => {
   return (
     <nav className="navbar">
-      {/* <div className="navbar-logo" onClick={() => setCurrentPage("home")}>
-        <img src={logo} alt="Logo" className="navbar-logo-img" />
-      </div> */}
+      
       <div className="navbar-links">
+      <div className="navbar-header">
+      <img src="/Images/logo.png" alt="Logo" className="navbar-logo" />
+      </div>
         <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage("home"); }}>
           Home
         </a>

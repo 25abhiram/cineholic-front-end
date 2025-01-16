@@ -1,87 +1,91 @@
-/* General Navbar Styles */
+/* Navbar container */
 .navbar {
-  padding: 1.5rem 2rem;
-  background: #1031db;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1620e2; /* Blue background */
+  box-shadow: 0 8px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease; /* Smooth resizing transition */
+}
+
+/* Navbar header and logo */
+.navbar-header {
+  display: flex;
+  align-items: center;
 }
 
 .navbar-logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff;
-  cursor: pointer;
-  transition: color 0.3s ease;
+  height: 40px; /* Default logo size */
+  margin-right: 10px;
+  transition: height 0.3s ease; /* Smooth logo resizing */
 }
 
-.navbar-logo:hover {
-  color: #cde1ff;
-}
-
+/* Navbar links */
 .navbar-links {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  gap: 20px;
+  transition: gap 0.3s ease; /* Smooth spacing transition */
 }
 
 .navbar-links a {
   text-decoration: none;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 500;
-  transition: color 0.3s ease, transform 0.2s ease;
+  color: #000; /* Black text */
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px; /* Default font size */
+  transition: color 0.3s ease, background-color 0.3s ease, font-size 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 70px;
 }
 
 .navbar-links a:hover {
-  /* display: block; Makes the link occupy the full width */
-  /* width: 100%; Ensures the hover effect spans the full width */
-  transform: scale(1.2); /* Slightly enlarge the element for a subtle hover effect */
-  background-color: #070512; /* Background color change */
-  color: #fff; /* Text color */
-  padding: 0.5rem 1.0rem; /* Adjust padding for consistent spacing */
-  border-radius: 5px; /* Optional: Slightly rounded corners */
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  color: #ffffff; /* White text on hover */
+  background-color: #102c44; /* Darker blue background on hover */
 }
 
+/* Responsive Design */
 
-/* Mobile Styles */
-@media (max-width: 768px) {
+/* For tablets and smaller screens */
+@media (max-width: 760px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem 2rem;
+    flex-direction: row; /* Maintain row layout */
+    flex-wrap: wrap; /* Allow items to wrap for smaller screens */
+    justify-content: center; /* Center-align the navbar items */
+    padding: 10px 15px; /* Adjust padding for smaller screens */
+  }
+
+  .navbar-logo {
+    height: 30px; /* Slightly smaller logo */
   }
 
   .navbar-links {
-    gap: 1rem;
-    width: 100%;
-    background: #1031db;
-    padding: 1rem 0;
-    
+    gap: 15px; /* Adjust spacing for smaller screens */
   }
 
   .navbar-links a {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    text-align: left;
+    font-size: 13px; /* Slightly larger text for better readability */
+    padding: 8px 12px; /* Adjust padding for touch targets */
+  }
+}
+
+/* For large desktops */
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 20px 50px; /* Larger padding for spacious layout */
   }
 
-  .navbar-links a:hover {
-    background-color: #090330;
-    color: #fff;
+  .navbar-logo {
+    height: 50px; /* Larger logo size for big screens */
   }
 
-  /* Show navbar links when expanded */
-  .navbar-links.active {
-    display: flex;
+  .navbar-links {
+    gap: 25px; /* Increase spacing between links */
   }
 
-  /* Hamburger Menu Styles */
-  .navbar-toggle {
-    display: block;
-    font-size: 2rem;
-    color: #fff;
-    cursor: pointer;
-    border: none;
-    background: none;
-    margin-left: auto;
+  .navbar-links a {
+    font-size: 16px; /* Slightly larger text */
+    padding: 10px 20px; /* Larger padding for better aesthetics */
   }
 }
