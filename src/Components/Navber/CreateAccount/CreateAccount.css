@@ -73,3 +73,20 @@
     background-color: #000; /* Slightly lighter shade on hover */
   }
   
+
+/* General greeting or success message */
+.general-message {
+  color: green; /* Green for success messages */
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Error message style */
+.error {
+  color: red; /* Red for error messages */
+  font-size: 12px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
