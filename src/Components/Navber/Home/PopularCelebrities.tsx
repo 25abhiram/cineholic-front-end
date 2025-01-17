@@ -3,26 +3,16 @@ import { useState } from 'react';
 
 const PopularCelebrities = () => {
   const celebrities = [
-    { id: 1, image: '/Images/sk.jpg', name: 'Sivakarthikeyan 1' },
-    { id: 2, image: '/Images/sk3.jpg', name: 'Sivakarthikeyan 2' },
-    { id: 3, image: '/Images/sk4.jpg', name: 'Sivakarthikeyan 3'  },
-    { id: 4, image: '/Images/sk6.jpg', name: 'Sivakarthikeyan 4' },
-    { id: 5, image: '/Images/sk.jpg', name: 'Sivakarthikeyan 5' },
-    { id: 6, image: '/Images/sk3.jpg', name: 'Sivakarthikeyan 6' },
-    { id: 7, image: '/Images/sk4.jpg', name: 'Sivakarthikeyan 7'  },
-    { id: 8, image: '/Images/sk6.jpg', name: 'Sivakarthikeyan 8' },
-    { id: 1, image: '/Images/sk.jpg', name: 'Sivakarthikeyan 9' },
-    { id: 2, image: '/Images/sk3.jpg', name: 'Sivakarthikeyan 10' },
-    { id: 3, image: '/Images/sk4.jpg', name: 'Sivakarthikeyan 11'  },
-    { id: 4, image: '/Images/sk6.jpg', name: 'Sivakarthikeyan 12' },
-    { id: 5, image: '/Images/sk.jpg', name: 'Sivakarthikeyan 13' },
-    { id: 6, image: '/Images/sk3.jpg', name: 'Sivakarthikeyan 14' },
-    { id: 7, image: '/Images/sk4.jpg', name: 'Sivakarthikeyan 15'  },
-    { id: 8, image: '/Images/sk6.jpg', name: 'Sivakarthikeyan 16' },
+    { id: 1, image: '/Images/vijay.jpg', name: 'vijay' },
+    { id: 2, image: '/Images/sk3.jpg', name: 'Sivakarthikeyan' },
+    { id: 3, image: '/Images/Rajinikanth1.jpg', name: 'Rajinikanth'  },
+    { id: 4, image: '/Images/Ajith.jpg', name: 'Ajith Kumar' },
+    { id: 7, image: '/Images/Sathyaraj.jpg', name: 'Sathyaraj'  },
+    { id: 8, image: '/Images/Silambarasan.jpg', name: 'Silambarasan' },
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5;
+  const itemsPerPage = 4;
 
   const totalPages = Math.ceil(celebrities.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;

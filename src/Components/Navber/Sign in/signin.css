@@ -1,6 +1,6 @@
 
 .avatar-placeholder {
-  margin-bottom: 1.2px;
+  margin-bottom: 10px;
 }
 
 .avatar-placeholder img {
@@ -43,29 +43,17 @@
   color: #6a11cb;
 }
 
-/* .forgot-password {
-  display: block;
-  font-size: 14px;
-  color: #3717ec;
-  text-decoration: none;
-  margin-bottom: 20px;
-  transition: color 0.3s ease-in-out;
-}
-
-.forgot-password:hover {
-  color: #000;
-} */
-
 .sign-in-button {
   width: 100%;
   padding: 12px 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   font-size: 16px;
   background-color: #060621;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  
 }
 
 .sign-in-button:hover {
@@ -77,7 +65,7 @@
   font-size: 14px;
   color: #3520cf;
   text-decoration: none;
-  margin-top: 15px;
+  margin-top: 120px;
 }
 
 .register-link:hover {

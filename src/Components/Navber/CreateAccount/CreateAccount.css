@@ -11,11 +11,12 @@
   /* Card styles */
   .card {
     background-color: #d9dbe6; /* White card background */
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
+    padding: 30px;
+    border-radius: 15px;
+    width: 450px;
+    height: 500px;
     text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .avatar-placeholder::after {
