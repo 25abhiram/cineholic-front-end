@@ -1,111 +1,154 @@
 .top-movies-container {
-  font-family: Arial, sans-serif;
   padding: 20px;
+  background-color: #ffffff;
+  /* text-align: center; */
 }
 
-h2 {
-  text-align: left;
-  font-size: clamp(3vw, 3vw, 24px);
-  font-weight: bold;
+.top-movies-container h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .movie-carousel {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
-  justify-content: space-between; /* Distribute items with equal space between them */
-  gap: 20px; /* Create a fixed gap between the movie cards */
-  align-items: center;
-  overflow: hidden;
+  justify-content: space-between; /* Ensure equal spacing between items */
+  gap: 20px;
+  overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+  padding-bottom: 10px;
 }
 
 .movie-card {
-  width: clamp(100px, 15vw, 900px); /* Dynamically adjusts size */
-  aspect-ratio: 3 / 5; /* Maintains proportion */
-  background-color: #2d2d48;
+  flex: 0 0 18%; /* Each card takes 18% of the parent width, leaving space for 5 cards */
+  background: #f8f9fa;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: white;
-  position: relative;
-}
-
-.movie-image {
-  background-color: #c0bcbc;
-  height: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .movie-image img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 3 / 4; /* Maintain a consistent aspect ratio */
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
 }
 
 .movie-info {
-  padding: 20px;
-  text-align: center;
+  padding: 10px;
+}
+
+.movie-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #000;
 }
 
 .rating {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 5px;
-  margin-bottom: 5px;
+  align-items: center;
+  font-size: 14px;
+  color: #0a1bd3;
+  margin-bottom: 10px;
+}
+
+.star {
+  margin-right: 5px;
 }
 
 .rating-value {
-  font-size: clamp(12px, 1.5vw, 14px); /* Adjusts font size */
-}
-
-.movie-name {
-  font-size: clamp(14px, 2vw, 16px); /* Scales dynamically */
-  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .watchlist-button,
 .trailer-button {
-  background-color: #aaa;
+  background-color: #0a1bd3;
+  color: white;
   border: none;
-  border-radius: 5px;
-  padding: clamp(4px, 1vw, 5px); /* Dynamically adjusts padding */
-  font-size: clamp(10px, 3vw, 15px); /* Dynamically adjusts font size */
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 4px;
   cursor: pointer;
-  margin: 5px auto; /* Add spacing and center the buttons */
-  display: block; /* Ensures buttons appear on separate lines */
-  width: 80%; /* Adjust button width */
-  text-align: center; /* Center text inside the button */
+  font-size: 14px;
 }
 
-.carousel-button {
-  position: absolute;
-  right: clamp(5px, 1vw, 10px); /* Adjusts position */
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: white;
-  border: 20px solid black;
-  border-radius: 50%;
-  padding: clamp(3px, 3vw, 5px); /* Adjusts button size */
-  cursor: pointer;
+.watchlist-button:hover,
+.trailer-button:hover {
+  background-color: #04182e;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
+.pagination {
+  margin-top: 20px;
+}
+
+.prev-button,
+.next-button {
+  background-color: #050217;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0 5px;
+}
+
+.prev-button:disabled,
+.next-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.prev-button:hover:not(:disabled),
+.next-button:hover:not(:disabled) {
+  background-color: #1a39c4;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+  .movie-card {
+    flex: 0 0 18%;
+  }
+
   .movie-carousel {
-      gap: clamp(8px, 2vw, 10px); /* Smaller gaps on medium screens */
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-card {
+    flex: 0 0 18%;
+  }
+
+  .movie-name {
+    font-size: 14px;
+  }
+
+  .watchlist-button,
+  .trailer-button {
+    padding: 6px 10px;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 480px) {
-  h2 {
-      text-align: center;
-      font-size: clamp(18px, 4vw, 20px); /* Center and scale dynamically */
+  .movie-card {
+    flex: 0 0 18%; /* Ensure all five cards fit in one line with scrolling */
   }
 
-  .carousel-button {
-      right: clamp(3px, 2vw, 5px); /* Adjust button position */
+  .movie-name {
+    font-size: 12px;
+  }
+
+  .watchlist-button,
+  .trailer-button {
+    padding: 5px 8px;
+    font-size: 10px;
+  }
+
+  .movie-carousel {
+    gap: 10px;
   }
 }
