@@ -1,37 +1,33 @@
-import React from 'react';
-import "../../Navber/Naver";
-import './CreateAccount.css';
-import avatar from '/avatar1.png'; // Adjust the path according to where the image is located
+import React from "react";
+import "./CreateAccount.css";
+import avatar from "/avatar1.png";
 
-const CreateAccount: React.FC = () => {
+interface CreateAccountProps {
+  setCurrentPage: (page: string) => void;
+}
+
+const CreateAccount: React.FC<CreateAccountProps> = ({ setCurrentPage }) => {
   return (
     <div className="container">
       <div className="card">
-        {/* Display the avatar */}
         <div className="avatar-placeholder">
           <img src={avatar} alt="Avatar" className="avatar-img" />
         </div>
-        <input
-          type="text"
-          placeholder="Username"
-          className="input"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          className="input"
-        />
-        <input
-          type="password"
-          placeholder="Confirm Password"
-          className="input"
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          className="input"
-        />
+        <input type="text" placeholder="Username" className="input" />
+        <input type="password" placeholder="Password" className="input" />
+        <input type="password" placeholder="Confirm Password" className="input" />
+        <input type="email" placeholder="Email" className="input" />
         <button className="create-account-button">Create account</button>
+        <a
+          href="#"
+          className="register-link"
+          onClick={(e) => {
+            e.preventDefault();
+            setCurrentPage("signin");
+          }}
+        >
+          Already have an account? Sign in
+        </a>
       </div>
     </div>
   );

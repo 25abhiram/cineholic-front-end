@@ -17,7 +17,7 @@ const Pages: React.FC = () => {
       case "signin":
         return <SignIn setCurrentPage={setCurrentPage} />;
       case "createAccount":
-        return <CreateAccount  />;
+        return <CreateAccount setCurrentPage={setCurrentPage} />;
       case "lists":
         return <Lists />;
       case "movies":
@@ -31,11 +31,10 @@ const Pages: React.FC = () => {
 
   return (
     <div>
-      {/* Conditionally render Navbar */}
-      {currentPage !== "signin" && currentPage !== "createAccount" && (
-        <Navbar setCurrentPage={setCurrentPage} />
-      )}
-      <div className="page-content">{renderPage()}</div>
+      <Navbar setCurrentPage={setCurrentPage} />
+      <div className="page-content">
+        {renderPage()}
+      </div>
     </div>
   );
 };
