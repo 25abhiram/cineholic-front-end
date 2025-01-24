@@ -11,9 +11,9 @@ const Movie: React.FC = () => {
   };
 
   return (
-    <div className="movie-container">
+    <div className="movie-containers">
       {/* Movie Section */}
-      <div className="movie-info">
+      <div className="movie-in">
         <div className="movie-img">
           <img src="public/images/Movies10.jpg" alt="Movie Poster" />
         </div>

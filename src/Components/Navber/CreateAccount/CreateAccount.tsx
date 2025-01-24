@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React,{ useState } from 'react';
 import { signUp } from "../../../api/api"; // Backend API function for sign-up
-import "./CreateAccount.css";
+import  "../../Navber/Naver";
+import './CreateAccount.css';
+import avatar from '/avatar1.png'; // Adjust the path according to where the image is located
 
 const CreateAccount: React.FC = () => {
   const [username, setUsername] = useState("");
@@ -60,7 +62,10 @@ const CreateAccount: React.FC = () => {
   return (
     <div className="container">
       <div className="card">
-        <h1>Create Account</h1>
+         {/* Display the avatar */}
+         <div className="avatar-placeholder">
+          <img src={avatar} alt="Avatar" className="avatar-img" />
+        </div>
         {generalMessage && <p className="general-message">{generalMessage}</p>}
         <input
           type="text"

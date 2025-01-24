@@ -2,41 +2,38 @@ import React, { useState } from "react";
 import "./TopMovies.css";
 
 const TopMovies: React.FC = () => {
-  // Array of movie data sorted by rating (highest to lowest)
   const movies = [
-    { name: "Movie 1", rating: 8.5, image: "/Images/Movies10.jpg" },
-    { name: "Movie 5", rating: 4.8, image: "/Images/Movies4.jpg" },
-    { name: "Movie 11", rating: 4.8, image: "/Images/Movies11.jpg" },
-    { name: "Movie 7", rating: 4.5, image: "/Images/Movies6.jpg" },
-    { name: "Movie 3", rating: 4.2, image: "/Images/Movies2.jpg" },
-    { name: "Movie 9", rating: 4.2, image: "/Images/Movies8.jpg" },
-    { name: "Movie 6", rating: 3.9, image: "/Images/Movies5.jpg" },
-    { name: "Movie 12", rating: 3.9, image: "/Images/Movies12.jpg" },
-    { name: "Movie 2", rating: 3.8, image: "/Images/Movies1.jpg" },
-    { name: "Movie 8", rating: 3.8, image: "/Images/Movies7.jpg" },
-    { name: "Movie 4", rating: 3.5, image: "/Images/Movies3.jpg" },
-    { name: "Movie 10", rating: 3.5, image: "/Images/Movies9.jpg" },
-  ].sort((a, b) => b.rating - a.rating); // Sort movies by rating descending
+    { name: "AMARAN", rating: 8.5, image: "/Images/Movies10.jpg", trailer: "https://www.youtube.com/embed/9SSd9L0SxN0", page: "/movies" },
+    { name: "DON", rating: 4.8, image: "/Images/Movies11.jpg", trailer: "https://www.youtube.com/embed/s5ak-NY6OC8", page: "/movies/don" },
+    { name: "BIGIL", rating: 4.5, image: "/Images/Movies6.jpg", trailer: "https://www.youtube.com/embed/GR-Ui8-V2M0", page: "/movies/bigil" },
+    { name: "96", rating: 4.2, image: "/Images/Movies2.jpg", trailer: "https://www.youtube.com/embed/r0synl-lI4I", page: "/movies/96" },
+    { name: "MASTER", rating: 4.2, image: "/Images/Movies8.jpg", trailer: "https://www.youtube.com/embed/UTiXQcrLlv4", page: "/movies/master" },
+    { name: "BEAST", rating: 3.9, image: "/Images/Movies5.jpg", trailer: "https://www.youtube.com/embed/vTIIMJ9tUc8", page: "/movies/beast" },
+    { name: "MERSAL", rating: 3.8, image: "/Images/Movies7.jpg", trailer: "https://www.youtube.com/embed/gQDo5QuZTaw", page: "/movies/mersal" },
+  ].sort((a, b) => b.rating - a.rating);
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
-
-  // Calculate total pages and displayed movies
   const totalPages = Math.ceil(movies.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const displayedMovies = movies.slice(startIndex, startIndex + itemsPerPage);
 
-  // Pagination handlers
+  const [selectedTrailer, setSelectedTrailer] = useState<string | null>(null);
+
   const handleNextPage = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage((prevPage) => prevPage + 1);
-    }
+    if (currentPage < totalPages) setCurrentPage((prevPage) => prevPage + 1);
   };
 
   const handlePrevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage((prevPage) => prevPage - 1);
-    }
+    if (currentPage > 1) setCurrentPage((prevPage) => prevPage - 1);
+  };
+
+  const openTrailer = (trailerUrl: string) => {
+    setSelectedTrailer(trailerUrl);
+  };
+
+  const closeTrailer = () => {
+    setSelectedTrailer(null);
   };
 
   return (
@@ -46,7 +43,10 @@ const TopMovies: React.FC = () => {
         {displayedMovies.map((movie, index) => (
           <div className="movie-card" key={index}>
             <div className="movie-image">
-              <img src={movie.image} alt={movie.name} />
+              {/* Wrap the image with a clickable link */}
+              <a href={movie.page} target="_blank" rel="noopener noreferrer">
+                <img src={movie.image} alt={movie.name} />
+              </a>
             </div>
             <div className="movie-info">
               <div className="rating">
@@ -55,7 +55,9 @@ const TopMovies: React.FC = () => {
               </div>
               <h3 className="movie-name">{movie.name}</h3>
               <button className="watchlist-button">+ Watchlist</button>
-              <button className="trailer-button">Trailer</button>
+              <button className="trailer-button" onClick={() => openTrailer(movie.trailer)}>
+                Trailer
+              </button>
             </div>
           </div>
         ))}
@@ -68,6 +70,25 @@ const TopMovies: React.FC = () => {
           Next
         </button>
       </div>
+
+      {selectedTrailer && (
+        <div className="trailer-modal">
+          <div className="trailer-content">
+            <button className="close-button" onClick={closeTrailer}>
+              ✖
+            </button>
+            <iframe
+              width="560"
+              height="315"
+              src={selectedTrailer}
+              title="Movie Trailer"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

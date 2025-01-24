@@ -37,7 +37,9 @@ const Signin: React.FC = () => {
   return (
     <div className="container">
       <div className="card">
-        <h1>Sign in</h1>
+        <div className="avatar-placeholder">
+        <img src="/public/avatar1.png" alt="Avatar" />
+        </div>
         {generalMessage && <p className="general-message">{generalMessage}</p>}
         <input
           type="text"
@@ -46,18 +48,26 @@ const Signin: React.FC = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        {errors.username && <p className="error">{errors.username}</p>}
-        <input
-          type="password"
-          placeholder="Password"
-          className="input"
-          value={password}
+                {errors.username && <p className="error">{errors.username}</p>}
+        <div className="input-wrapper">
+          <input
+            type="password"
+            placeholder="Password"
+            className="input"
+            value={password}
           onChange={(e) => setPassword(e.target.value)}
-        />
-        {errors.password && <p className="error">{errors.password}</p>}
+          />
+                  {errors.password && <p className="error">{errors.password}</p>}
+        </div>
+        {/* <a href="#" className="forgot-password">
+          Forgot password?
+        </a> */}
         <button className="sign-in-button" onClick={handleSignIn}>
           Sign in
         </button>
+        <a href="#" className="register-link">
+          Don’t have an account? Register
+        </a>
       </div>
     </div>
   );

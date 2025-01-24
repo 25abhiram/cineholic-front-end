@@ -1,76 +1,76 @@
-/* Container styles */
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #1717d7; /* Dark background color */
-}
 
-
-.card {
-  background-color: #ffffff; 
-  padding: 20px;
-  border-radius: 10px;
-  width: 350px;
-  height: 400px;
-  text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-}
-.input-wrapper {
-  position: relative;
+.avatar-placeholder {
   margin-bottom: 10px;
 }
 
-/* Show password toggle */
+.avatar-placeholder img {
+  width: 250px;
+  height: 100px;
+}
+
+
+.input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.input:focus {
+  border-color: #6a11cb;
+  outline: none;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
 .show-password {
   position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #6c63ff;
-  font-size: 12px;
+  right: 15px;
+  top: 12px;
   cursor: pointer;
+  font-size: 14px;
+  color: #aaa;
+  transition: color 0.3s ease-in-out;
 }
 
-/* Forgot password link */
-.forgot-password {
-  display: block;
-  
-  margin: 10px 0;
-  color: #6c63ff;
-  font-size: 12px;
-  text-decoration: none;
+.show-password:hover {
+  color: #6a11cb;
 }
 
-/* Sign-in button styles */
 .sign-in-button {
   width: 100%;
-  padding: 10px;
-  background-color: #1a1a3e;
-  color: #ffffff;
+  padding: 12px 15px;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: 50px;
   font-size: 16px;
-  font-weight: bold;
-  margin-top: 10px;
+  background-color: #060621;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  
 }
 
 .sign-in-button:hover {
-  background-color: #9797ff; /* Slightly lighter shade for hover */
+  background-color: #3717ec;
 }
 
-/* Register link */
 .register-link {
   display: block;
-  margin-top: 20px;
-  color: #000;
   font-size: 14px;
+  color: #3520cf;
   text-decoration: none;
+  margin-top: 120px;
 }
-
+.register-link:hover {
+  text-decoration: underline;
+  color: #000;
+}
 /* General greeting or success message */
 .general-message {
   color: green; /* Green for success messages */
@@ -87,7 +87,6 @@
   margin-top: 5px;
   margin-left: 5px;
 }
-
 
 /* .container {
   display: flex;
