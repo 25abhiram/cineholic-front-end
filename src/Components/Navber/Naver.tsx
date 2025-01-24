@@ -11,7 +11,7 @@ const Navbar: React.FC<NavbarProps> = ({ setCurrentPage }) => {
       
       <div className="navbar-links">
       <div className="navbar-header">
-      <img src="/Images/logo2.png" alt="Logo" className="navbar-logo" />
+      {/* <img src="/Images/logo.png" alt="Logo" className="navbar-logo" /> */}
       </div>
         <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage("home"); }}>
           Home

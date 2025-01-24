@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #1620e2; /* Blue background */
+  background-color: #0e19ea; /* Blue background */
   box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   font-family: Arial, sans-serif;
   transition: all 0.3s ease; /* Smooth resizing transition */

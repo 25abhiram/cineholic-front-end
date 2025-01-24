@@ -8,16 +8,16 @@ import Movies from "../Movies/Movies";
 import AvailableInTheater from "../Theater/Theater";
 
 const Pages: React.FC = () => {
-  const [currentPage, setCurrentPage] = React.useState("home");
+  const [currentPage, setCurrentPage] = React.useState("signin"); // Default to "signin"
 
   const renderPage = () => {
     switch (currentPage) {
       case "home":
         return <Home />;
       case "signin":
-        return <SignIn />;
+        return <SignIn setCurrentPage={setCurrentPage} />;
       case "createAccount":
-        return <CreateAccount />;
+        return <CreateAccount  />;
       case "lists":
         return <Lists />;
       case "movies":
@@ -31,10 +31,11 @@ const Pages: React.FC = () => {
 
   return (
     <div>
-      <Navbar setCurrentPage={setCurrentPage} />
-      <div className="page-content">
-        {renderPage()}
-      </div>
+      {/* Conditionally render Navbar */}
+      {currentPage !== "signin" && currentPage !== "createAccount" && (
+        <Navbar setCurrentPage={setCurrentPage} />
+      )}
+      <div className="page-content">{renderPage()}</div>
     </div>
   );
 };
