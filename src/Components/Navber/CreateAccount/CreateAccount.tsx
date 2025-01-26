@@ -1,8 +1,11 @@
-import React,{ useState } from 'react';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import { signUp } from "../../../api/api"; // Backend API function for sign-up
-import  "../../Navber/Naver";
-import './CreateAccount.css';
-import avatar from '/avatar1.png'; // Adjust the path according to where the image is located
+import "../../Navber/Naver";
+import "./CreateAccount.css";
+import avatar from "/avatar1.png"; // Adjust the path according to where the image is located
+import { useAuth } from "../../../context/AuthContext";
+import { Link } from "react-router-dom";
 
 const CreateAccount: React.FC = () => {
   const [username, setUsername] = useState("");
@@ -16,7 +19,9 @@ const CreateAccount: React.FC = () => {
     confirmPassword: "",
   });
   const [generalMessage, setGeneralMessage] = useState("");
+  const navigate = useNavigate(); // Initialize useNavigate
 
+  const { setIsAuthenticated } = useAuth();
   const handleSignUp = async () => {
     setErrors({ username: "", email: "", password: "", confirmPassword: "" });
     setGeneralMessage("");
@@ -41,8 +46,12 @@ const CreateAccount: React.FC = () => {
     }
 
     try {
-      await signUp(username, email, password);
+      const response = await signUp(username, email, password);
+      const token = response.data.token;
+      localStorage.setItem("authToken", token);
+      setIsAuthenticated(true); // Update authentication state
       setGeneralMessage("Account created successfully!");
+      navigate("/Home"); // Navigate to home page on success
     } catch (err: any) {
       if (err.response && err.response.data.message) {
         const backendMessage = err.response.data.message;
@@ -62,8 +71,8 @@ const CreateAccount: React.FC = () => {
   return (
     <div className="container">
       <div className="card">
-         {/* Display the avatar */}
-         <div className="avatar-placeholder">
+        {/* Display the avatar */}
+        <div className="avatar-placeholder">
           <img src={avatar} alt="Avatar" className="avatar-img" />
         </div>
         {generalMessage && <p className="general-message">{generalMessage}</p>}
@@ -104,6 +113,9 @@ const CreateAccount: React.FC = () => {
         <button className="create-account-button" onClick={handleSignUp}>
           Create account
         </button>
+        <p>
+  Already have an account? <Link to="/Signin">Sign in</Link>
+</p>
       </div>
     </div>
   );

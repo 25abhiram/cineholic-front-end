@@ -1,36 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navber.css";
-// import logo from "./public/logo.png";
-interface NavbarProps {
-  setCurrentPage: (page: string) => void;
-}
 
-const Navbar: React.FC<NavbarProps> = ({ setCurrentPage }) => {
+const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
-      
-      <div className="navbar-links">
       <div className="navbar-header">
-      <img src="/Images/logo2.png" alt="Logo" className="navbar-logo" />
+        <img src="/Images/logo2.png" alt="Logo" className="navbar-logo" />
       </div>
-        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage("home"); }}>
-          Home
-        </a>
-        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage("signin"); }}>
-          Sign In
-        </a>
-        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage("createAccount"); }}>
-          Create Account
-        </a>
-        {/* <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage("lists"); }}>
-          Lists
-        </a> */}
-        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage("movies"); }}>
-          Movies
-        </a>
-        <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage("inTheater"); }}>
-          Available In Theater
-        </a>
+      <div className="navbar-links">
+        <Link to="/">Home</Link>
+        <Link to="/signin">Sign In</Link>
+        <Link to="/createAccount">Create Account</Link>
+        {/* Uncomment if needed */}
+        {/* <Link to="/lists">Lists</Link> */}
+        <Link to="/movies">Movies</Link>
+        <Link to="/inTheater">Available In Theater</Link>
       </div>
     </nav>
   );
